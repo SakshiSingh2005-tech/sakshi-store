@@ -1,0 +1,8 @@
+Django==6.1
+Pillow==12.3.0
+cloudinary>=1.44,<2
+django-cloudinary-storage==0.3.0
+dj-database-url>=3,<4
+gunicorn>=23,<24
+psycopg[binary]>=3.2,<4
+whitenoise>=6.8,<7

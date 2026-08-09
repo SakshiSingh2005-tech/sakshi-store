@@ -1,0 +1,21 @@
+# Local Python environments and secrets
+.venv/
+env/
+myvenv/
+**/.env
+**/.env.*
+!**/.env.example
+
+# Local Django data and generated files
+**/db.sqlite3
+chaiaurDjango/media/
+chaiaurDjango/staticfiles/
+**/__pycache__/
+*.py[cod]
+
+# Local image copies outside the media directory
+chaiaurDjango/products/*.png
+chaiaurDjango/products/*.jpg
+chaiaurDjango/products/*.jpeg
+chaiaurDjango/products/*.gif
+chaiaurDjango/products/*.webp
