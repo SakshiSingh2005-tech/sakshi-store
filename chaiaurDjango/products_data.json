@@ -1,0 +1,62 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Classic Black T-Shirt",
+    "description": "Comfortable premium cotton t-shirt for everyday wear.",
+    "price": "799.00",
+    "image": "products/Screenshot_2026-08-10_at_1.21.32AM.png"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Classic Brown Leather Handbag",
+    "description": "Elegant and spacious handbag designed for everyday use, with a classic brown finish and durable construction.",
+    "price": "1499.00",
+    "image": "products/Screenshot_2026-08-10_at_1.26.23AM.png"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Classic White Sneakers",
+    "description": "Comfortable and versatile sneakers designed for everyday casual wear.",
+    "price": "1999.00",
+    "image": "products/Screenshot_2026-08-10_at_1.29.48AM.png"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Wireless Bluetooth Headphones",
+    "description": "Comfortable wireless headphones with clear sound, Bluetooth connectivity and a long-lasting battery for everyday entertainment.",
+    "price": "2499.00",
+    "image": "products/Screenshot_2026-08-10_at_1.31.29AM.png"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Crop Top",
+    "description": "Stylish and comfortable ribbed crop top made for casual everyday wear. Soft fabric with amodern and versatile design.",
+    "price": "799.00",
+    "image": "products/Screenshot_2026-08-10_at_2.34.55AM.png"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Elegant Charm Bracelet",
+    "description": "Stylish charm bracelet with a simple and elegant design, perfect for everyday wear and special occasions.",
+    "price": "599.00",
+    "image": "products/Screenshot_2026-08-10_at_2.36.30AM.png"
+  }
+}
+]

@@ -168,13 +168,22 @@ if not DEBUG:
         },
     }
 
-    if not os.environ.get('CLOUDINARY_URL'):
+STORAGES = {
+    'default': {
+        'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
+    },
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+    },
+}
+
+if not os.environ.get('CLOUDINARY_URL'):
+    if not DEBUG:
         raise RuntimeError('CLOUDINARY_URL must be set when DJANGO_DEBUG=False.')
 
-    INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
-    STORAGES['default'] = {
-        'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
-    }
+INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
+
+if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
