@@ -152,38 +152,32 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
+# Email
+
 if DEBUG:
-    MAILERS = {
-        'default': {
-            'BACKEND': 'django.core.mail.backends.console.EmailBackend',
-        },
-    }
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+
 if not DEBUG:
+    INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
+
     STORAGES = {
+        'default': {
+            'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
+        },
         'staticfiles': {
             'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
         },
     }
 
-STORAGES = {
-    'default': {
-        'BACKEND': 'cloudinary_storage.storage.MediaCloudinaryStorage',
-    },
-    'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-    },
-}
+    if not os.environ.get('CLOUDINARY_URL'):
+        raise RuntimeError(
+            'CLOUDINARY_URL must be set when DJANGO_DEBUG=False.'
+        )
 
-if not os.environ.get('CLOUDINARY_URL'):
-    if not DEBUG:
-        raise RuntimeError('CLOUDINARY_URL must be set when DJANGO_DEBUG=False.')
-
-INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
-
-if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
