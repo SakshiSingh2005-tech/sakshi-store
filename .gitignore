@@ -19,3 +19,4 @@ chaiaurDjango/products/*.jpg
 chaiaurDjango/products/*.jpeg
 chaiaurDjango/products/*.gif
 chaiaurDjango/products/*.webp
+test.py
