@@ -24,23 +24,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # values as environment variables, so no production secret is stored in Git.
 DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() == 'true'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
-
 if not SECRET_KEY:
     if DEBUG:
         SECRET_KEY = 'unsafe-local-development-key-change-me'
     else:
         raise RuntimeError('DJANGO_SECRET_KEY must be set when DJANGO_DEBUG=False.')
 
-if DEBUG:
-    ALLOWED_HOSTS = []
-else:
-    allowed_hosts = os.environ.get(
-        'DJANGO_ALLOWED_HOSTS', os.environ.get('RENDER_EXTERNAL_HOSTNAME', '')
-    )
-    ALLOWED_HOSTS = [host.strip() for host in allowed_hosts.split(',') if host.strip()]
-    if not ALLOWED_HOSTS:
-        raise RuntimeError('Set DJANGO_ALLOWED_HOSTS for production.')
 
+allowed_hosts = os.environ.get(
+    'ALLOWED_HOSTS',
+    os.environ.get('DJANGO_ALLOWED_HOSTS', os.environ.get('RENDER_EXTERNAL_HOSTNAME', ''))
+)
+
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in allowed_hosts.split(',')
+    if host.strip()
+]
+
+if not DEBUG and not ALLOWED_HOSTS:
+    raise RuntimeError('Set ALLOWED_HOSTS for production.')
 
 # Application definition
 
