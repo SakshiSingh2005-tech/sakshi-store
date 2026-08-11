@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'products',
+    
 ]
 
 MIDDLEWARE = [
@@ -157,19 +158,18 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-
+MEDIA_URL = ''
+# MEDIA_ROOT = BASE_DIR / 'media'
 
 INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
 
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'CLOUD_NAME': 'fmx4606l',
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
-    'PREFIX': '',
 }
-
 
 STORAGES = {
     'default': {
@@ -179,15 +179,11 @@ STORAGES = {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     },
 }
-
 if not os.environ.get('CLOUDINARY_URL'):
     if not DEBUG:
         raise RuntimeError(
             'CLOUDINARY_URL must be set when DJANGO_DEBUG=False.'
         )
-
-if not DEBUG:
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+    CLOUDINARY_STORAGE = {
+    'PREFIX': '',
+}
