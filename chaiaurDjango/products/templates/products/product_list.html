@@ -166,6 +166,7 @@
     <div class="product-card">
 
         {% if product.image %}
+            <p>{{ product.image.url }}</p>
             <img src="{{ product.image.url }}" alt="{{ product.name }}">
         {% endif %}
 
