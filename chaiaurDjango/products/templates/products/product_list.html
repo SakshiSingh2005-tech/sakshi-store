@@ -166,7 +166,11 @@
     <div class="product-card">
 
         {% if product.image %}
-            <p>{{ product.image.url }}</p>
+            <p>
+    <a href="{{ product.image.url }}" target="_blank">
+        {{ product.image.url }}
+    </a>
+</p>
             <img src="{{ product.image.url }}" alt="{{ product.name }}">
         {% endif %}
 
