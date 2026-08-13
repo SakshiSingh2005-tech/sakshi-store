@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -158,17 +161,18 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-MEDIA_URL = ''
-# MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
-INSTALLED_APPS += ['cloudinary_storage', 'cloudinary']
-
-CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+INSTALLED_APPS += [
+    'cloudinary_storage',
+    'cloudinary',
+]
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'fmx4606l',
     'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+    'PREFIX': '',
 }
 
 STORAGES = {
@@ -178,12 +182,4 @@ STORAGES = {
     'staticfiles': {
         'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
     },
-}
-if not os.environ.get('CLOUDINARY_URL'):
-    if not DEBUG:
-        raise RuntimeError(
-            'CLOUDINARY_URL must be set when DJANGO_DEBUG=False.'
-        )
-    CLOUDINARY_STORAGE = {
-    'PREFIX': '',
 }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ product.name }} | Sakshi Store</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        .cart {
+            background: white;
+            color: #111;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .product-detail {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .product-info {
+            padding: 20px 0;
+        }
+
+        .category {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .product-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .stock {
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #333;
+        }
+
+        footer {
+            text-align: center;
+            background: #111;
+            color: white;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .product-image img {
+                height: 350px;
+            }
+
+            .product-info h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛍️ Sakshi Store</h1>
+
+    <a href="#" class="cart">
+        🛒 Cart
+    </a>
+</header>
+
+<main>
+
+    <div class="product-detail">
+
+        <div class="product-image">
+
+            <a href="{% url 'product_list' %}" class="back">
+                ← Back to Products
+            </a>
+
+            {% if product.image %}
+    <a href="{% url 'product_detail' product.id %}">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    </a>
+{% endif %}
+
+        </div>
+
+        <div class="product-info">
+
+            {% if product.category %}
+                <p class="category">
+                    Category: {{ product.category }}
+                </p>
+            {% endif %}
+
+            <h2>{{ product.name }}</h2>
+
+            <p class="description">
+                {{ product.description }}
+            </p>
+
+            <p class="price">
+                ₹{{ product.price }}
+            </p>
+
+            <p class="stock">
+                {% if product.stock > 0 %}
+                    In Stock: {{ product.stock }}
+                {% else %}
+                    Out of Stock
+                {% endif %}
+            </p>
+
+            {% if product.stock > 0 %}
+                <a href="#" class="btn">
+                    🛒 Add to Cart
+                </a>
+            {% else %}
+                <a href="#" class="btn">
+                    Out of Stock
+                </a>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Sakshi Store. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

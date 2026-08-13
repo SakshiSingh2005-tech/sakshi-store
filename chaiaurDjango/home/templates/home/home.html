@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sakshi Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sakshi Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+        }
+
+        nav {
+            background: #222;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to Sakshi Website</h1>
-    <p>This is my first Django website.</p>
+
+    <nav>
+        <h2>Sakshi Store</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/products/">Products</a>
+            <a href="/admin/">Admin</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to Sakshi Store ❤️</h1>
+
+        <p>
+            Discover amazing products at Sakshi Store.
+        </p>
+
+        <a href="/products/" class="btn">
+            View Products
+        </a>
+    </section>
+
 </body>
 </html>
