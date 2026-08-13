@@ -1,0 +1,262 @@
+[
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Floral Princess Frock",
+    "description": "eautiful floral frock with a cute princess-style design, perfect for parties and special occasions.",
+    "price": "899.00",
+    "image": "products/Screenshot_2026-08-13_at_12.54.31AM_ud2k4n",
+    "category": "Frock",
+    "stock": 0,
+    "created_at": "2026-08-12T19:26:22.591Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Cute Bow Frock",
+    "description": "Adorable frock featuring a cute bow design, perfect for casual outings and celebrations.",
+    "price": "699.00",
+    "image": "products/Screenshot_2026-08-13_at_12.57.19AM_ipthbr",
+    "category": "Frock",
+    "stock": 25,
+    "created_at": "2026-08-12T19:28:11.812Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Embroidered Anarkali Suit",
+    "description": "Graceful Anarkali suit featuring elegant embroidery, perfect for festive occasions.",
+    "price": "1499.00",
+    "image": "products/Screenshot_2026-08-13_at_12.59.16AM_uhezg9",
+    "category": "Suit",
+    "stock": 0,
+    "created_at": "2026-08-12T19:30:05.536Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Spider Girl Printed Top",
+    "description": "Stylish superhero-inspired printed crop top for girls, perfect for a fun and casual look.\r\nAvailability: In Stock \r\n\r\nSizes: S, M, L, XL",
+    "price": "599.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.05.20_AM_i7pkfy",
+    "category": "Crop Top",
+    "stock": 42,
+    "created_at": "2026-08-12T19:36:28.430Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "Green Casual Crop Top",
+    "description": "Stylish green crop top with a comfortable and trendy design, perfect for casual outings and everyday wear.\r\n\r\nS, M, L, XL",
+    "price": "499.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.05.21_AM_trie06",
+    "category": "Crop Top",
+    "stock": 2,
+    "created_at": "2026-08-12T19:38:33.127Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "Classic Black Crop Top",
+    "description": "Stylish black crop top with a simple and versatile design, perfect for casual outings and everyday wear.",
+    "price": "499.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.05.21_AM-2_akgk31",
+    "category": "Crop Top",
+    "stock": 5,
+    "created_at": "2026-08-12T19:40:28.935Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "name": "Silver-Tone Elegant Earrings",
+    "description": "Elegant silver-tone earrings with a stylish design, perfect for everyday wear, parties and special occasions.\r\n\r\nMaterial: Silver-tone alloy\r\nType: Fashion Earrings",
+    "price": "299.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.05.21_AM-3_vim7cm",
+    "category": "Earrings",
+    "stock": 6,
+    "created_at": "2026-08-12T19:42:28.381Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "Classic Casual T-Shirt",
+    "description": "Comfortable and stylish casual T-shirt, perfect for everyday wear, outings and relaxed looks.\r\nAvailability: In Stock",
+    "price": "499.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.16.11_AM_uzi0hn",
+    "category": "T-Shirt",
+    "stock": 5,
+    "created_at": "2026-08-12T19:46:43.020Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "Evil Eye Charm Bracelet",
+    "description": "Stylish Evil Eye-inspired charm bracelet with a simple and trendy design, perfect for adding a fashionable touch to everyday outfits.\r\nAvailability: In Stock\r\nMaterial: Alloy",
+    "price": "99.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.16.11_AM-2_rpfezy",
+    "category": "Bracelets",
+    "stock": 9,
+    "created_at": "2026-08-12T19:48:42.114Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "name": "Classic Formal Shirt",
+    "description": "Elegant formal shirt with a clean and polished design, perfect for office wear, meetings and professional occasions.\r\nAvailability: In Stock\r\nSizes: S, M, L, XL\r\nColor: White",
+    "price": "799.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.16.11_AM-3_xztjzf",
+    "category": "Formal Shirts",
+    "stock": 8,
+    "created_at": "2026-08-12T19:50:02.601Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "name": "Elegant Green Suit Set",
+    "description": "Beautiful green suit set with an elegant and graceful design, perfect for festive occasions, family functions and special events.\r\nAvailability: In Stock\r\nSizes: S, M, L, XL\r\nColor: Green",
+    "price": "1299.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.05.23_AM_sepkgz",
+    "category": "Suits",
+    "stock": 8,
+    "created_at": "2026-08-12T19:53:27.781Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "name": "Elegant Earring & Necklace Set",
+    "description": "Beautiful matching earring and necklace set with an elegant design, perfect for parties, festive occasions and special events.\r\nAvailability: In Stock\r\nMaterial: Alloy\r\nType: Necklace & Earrings Set",
+    "price": "699.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.26.02_AM_slwouj",
+    "category": "Jewellery Set",
+    "stock": 8,
+    "created_at": "2026-08-12T19:57:27.204Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "name": "Classic Blue Slim Fit Jeans",
+    "description": "Stylish and comfortable men's wear designed for everyday use. Perfect for casual outings, comfortable wear and a trendy look.",
+    "price": "999.00",
+    "image": "products/Screenshot_2026-08-13_at_1.29.16AM_orfzfe",
+    "category": "Men's Jeans",
+    "stock": 5,
+    "created_at": "2026-08-12T20:00:27.015Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "Classic Denim Shirt",
+    "description": "Stylish and comfortable men's wear designed for everyday use. Perfect for casual outings, comfortable wear and a trendy look.",
+    "price": "799.00",
+    "image": "products/Screenshot_2026-08-13_at_1.31.27AM_too1il",
+    "category": "Men's Shirts",
+    "stock": 7,
+    "created_at": "2026-08-12T20:02:41.370Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "name": "Elegant Silver Chain Watch",
+    "description": "Stylish and elegant wristwatch with a classic design, perfect for everyday wear, casual outings and special occasions.\r\nAvailability: In Stock",
+    "price": "1199.00",
+    "image": "products/Screenshot_2026-08-13_at_1.33.45AM_hb11ra",
+    "category": "Watches",
+    "stock": 6,
+    "created_at": "2026-08-12T20:05:26.237Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "name": "Luxury Gold-Tone Watch",
+    "description": "Stylish and elegant wristwatch with a classic design, perfect for everyday wear, casual outings and special occasions.",
+    "price": "1299.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.36.54_AM_ksufnw",
+    "category": "Watches",
+    "stock": 8,
+    "created_at": "2026-08-12T20:08:30.240Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "name": "Wireless Bluetooth Headphones",
+    "description": "Stylish wireless headphones with a comfortable design, clear sound and a modern look. Perfect for music, videos and everyday use.\r\nAvailability: In Stock\r\nColor: Black\r\nType: Wireless\r\nConnectivity: Bluetooth",
+    "price": "1299.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.43.37_AM_gxs9sa",
+    "category": "Headphones",
+    "stock": 8,
+    "created_at": "2026-08-12T20:15:33.005Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "name": "Men's Classic Red Formal Shirt",
+    "description": "Smart and elegant red formal shirt with a clean, polished design, perfect for office wear, meetings and professional occasions.\r\nAvailability: In Stock\r\nSizes: S, M, L, XL\r\nColor: Red",
+    "price": "799.00",
+    "image": "products/Screenshot_2026-08-13_at_1.46.20AM_wjmjys",
+    "category": "Formal Shirts",
+    "stock": 18,
+    "created_at": "2026-08-12T20:17:57.357Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "name": "Elegant Sky Blue Saree",
+    "description": "Beautiful sky blue saree with an elegant and graceful look, perfect for festive occasions, parties and special events.\r\nAvailability: In Stock\r\nColor: Sky Blue\r\nFabric: Soft & Comfortable\r\nType: Traditional Wear",
+    "price": "1499.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.43.40_AM_frtbin",
+    "category": "Sarees",
+    "stock": 9,
+    "created_at": "2026-08-12T20:19:37.069Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "name": "Stylish Black Crop Top",
+    "description": "Trendy black crop top with a stylish and comfortable design, perfect for casual outings, parties and everyday looks.\r\nAvailability: In Stock\r\nSizes: S, M, L, XL\r\nColor: Black",
+    "price": "499.00",
+    "image": "products/WhatsApp_Image_2026-08-13_at_1.43.41_AM_kdrevl",
+    "category": "Crop Top",
+    "stock": 31,
+    "created_at": "2026-08-12T20:21:00.346Z"
+  }
+}
+]
