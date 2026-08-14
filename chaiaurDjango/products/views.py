@@ -3,7 +3,16 @@ from .models import Product, Order
 
 
 def product_list(request):
-    products = Product.objects.all()
+    category = request.GET.get('category')
+
+    if category:
+        products = Product.objects.filter(category=category)
+    else:
+        products = Product.objects.all()
+
+    categories = Product.objects.values_list(
+        'category', flat=True
+    ).distinct()
 
     cart = request.session.get('cart', {})
     cart_count = sum(cart.values())
@@ -11,6 +20,8 @@ def product_list(request):
     return render(request, 'products/product_list.html', {
         'products': products,
         'cart_count': cart_count,
+        'categories': categories,
+        'selected_category': category,
     })
 
 
