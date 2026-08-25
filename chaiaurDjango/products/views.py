@@ -161,3 +161,25 @@ def checkout(request):
         'products': products,
         'total': total,
     })
+def payment(request):
+    cart_data = request.session.get('cart', {})
+
+    products = []
+    total = 0
+
+    for product_id, quantity in cart_data.items():
+        product = get_object_or_404(Product, id=product_id)
+
+        item_total = product.price * quantity
+        total += item_total
+
+        products.append({
+            'product': product,
+            'quantity': quantity,
+            'item_total': item_total,
+        })
+
+    return render(request, 'products/payment.html', {
+        'products': products,
+        'total': total,
+    })

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment - Sakshi Store</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 6%;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        .payment-container {
+            width: 90%;
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .payment-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .pay-button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 15px;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .pay-button:hover {
+            background: #333;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>💳 Sakshi Store - Payment</h1>
+</header>
+
+<div class="payment-container">
+
+    <div class="payment-box">
+
+        <h2>Order Summary</h2>
+
+        {% for item in products %}
+
+        <div class="order-item">
+            <div>
+                <strong>{{ item.product.name }}</strong>
+                <br>
+                Quantity: {{ item.quantity }}
+            </div>
+
+            <div>
+                ₹{{ item.item_total }}
+            </div>
+        </div>
+
+        {% endfor %}
+
+        <div class="total">
+            <span>Total</span>
+            <span>₹{{ total }}</span>
+        </div>
+
+        <button class="pay-button" type="button">
+            💳 Pay Now
+        </button>
+
+        <a href="{% url 'checkout' %}" class="back">
+            ← Back to Checkout
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
